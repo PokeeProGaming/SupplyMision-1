@@ -19,9 +19,6 @@ function setup() {
 	packageSprite=createSprite(width/2, 80, 10,10,packageSprite_options);
 	packageSprite.addImage(packageIMG)
 	packageSprite.scale=0.2
-	var packageSprite_options ={
-		restitution: 0.5
-	}
 
 
 	helicopterSprite=createSprite(width/2, 200, 10,10);
@@ -35,7 +32,7 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:3, isStatic:true});
+	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:0.4, isStatic:true});
 	World.add(world, packageBody);
 	
 
